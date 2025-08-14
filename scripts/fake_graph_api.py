@@ -16,22 +16,22 @@ def fake_graph_request(token: str):
 
 def main():
     try:
-        print("🔑 Attempting to log in...")
+        print(" Attempting to log in...")
         token = fake_graph_login()
         print("✅ Login success! Token:", token)
 
-        print("🌐 Making API request...")
+        print(" Making API request...")
         data = fake_graph_request(token)
-        print("✅ Request success! Got data:", data)
+        print(" Request success! Got data:", data)
 
     except GraphAuthError as e:
-        print("❌ AUTH ERROR:", e)
+        print(" AUTH ERROR:", e)
 
     except GraphHttpError as e:
-        print("❌ HTTP ERROR:", e)
+        print(" HTTP ERROR:", e)
 
     except Exception as e:
-        print("❌ UNEXPECTED ERROR:", e)
+        print(" UNEXPECTED ERROR:", e)
 
 if __name__ == "__main__":
     main()
